@@ -32,6 +32,48 @@ public class Main {
         System.out.println(mentoria1.toString());
         System.out.println(mentoria2.toString());
 
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Santander Java Backend");
+        bootcamp.setDescricao("Bootcamp Java patrocinado pelo Santander");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria1);
+        bootcamp.getConteudos().add(mentoria2);
+        System.out.println("-----------------------------------------------------------------------------");
+        System.out.println("Conteudos do Bootcamp: "+ bootcamp.getConteudos());
+        System.out.println("-----------------------------------------------------------------------------");
+        Dev fernanda = new Dev("Fernanda Pestana");
+        Dev camila = new Dev("Camila");
+        System.out.println("-----------------------------------------------------------------------------");
+        System.out.println(fernanda.getNome() + " - Conteudos Inscritos: "+fernanda.getConteudosInscritos());
+        System.out.println(fernanda.getNome() + " - Conteudos Concluidos: "+fernanda.getConteudosConcluidos());
+        System.out.println(camila.getNome() + " - Conteudos Inscritos: "+camila.getConteudosInscritos());
+        System.out.println(camila.getNome() + " - Conteudos Concluidos: "+camila.getConteudosConcluidos());
+        System.out.println("-----------------------------------------------------------------------------");
+        fernanda.inscreverBootcamp(bootcamp);
+        System.out.println("Fernanda inscrita no Bootcamp!");
+        camila.inscreverBootcamp(bootcamp);
+        System.out.println("Camila inscrita no Bootcamp!");
+        System.out.println("-----------------------------------------------------------------------------");
+        System.out.println(fernanda.getNome() + " - Conteudos Inscritos: "+fernanda.getConteudosInscritos());
+        System.out.println(fernanda.getNome() + " - Conteudos Concluidos: "+fernanda.getConteudosConcluidos());
+        System.out.println(fernanda.getNome() + " - XP: "+fernanda.calcularTotalXP());
+        System.out.println(camila.getNome() + " - Conteudos Inscritos: "+camila.getConteudosInscritos());
+        System.out.println(camila.getNome() + " - Conteudos Concluidos: "+camila.getConteudosConcluidos());
+        System.out.println(camila.getNome() + " - XP: "+camila.calcularTotalXP());
+        System.out.println("-----------------------------------------------------------------------------");
+        fernanda.progredir();
+        System.out.println("Fernanda progrediu no Bootcamp!");
+        camila.progredir();
+        System.out.println("Camila progrediu no Bootcamp!");
+        System.out.println("-----------------------------------------------------------------------------");
+        System.out.println(fernanda.getNome() + " - Conteudos Inscritos: "+fernanda.getConteudosInscritos());
+        System.out.println(fernanda.getNome() + " - Conteudos Concluidos: "+fernanda.getConteudosConcluidos());
+        System.out.println(fernanda.getNome() + " - XP: "+fernanda.calcularTotalXP());
+        System.out.println("-----------------------------------------------------------------------------");
+        System.out.println(camila.getNome() + " - Conteudos Inscritos: "+camila.getConteudosInscritos());
+        System.out.println(camila.getNome() + " - Conteudos Concluidos: "+camila.getConteudosConcluidos());
+        System.out.println(camila.getNome() + " - XP: "+camila.calcularTotalXP());
 
     }
 }
